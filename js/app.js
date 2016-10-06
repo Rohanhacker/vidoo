@@ -1,4 +1,4 @@
-var peer = new Peer({"key":"b3igy216q6geewmi",debug:3,config:{
+var peer = new Peer({"key":"b3igy216q6geewmi","debug":3,"config":{
   "iceServer": [
     {"url":"stun.l.google.com:19302"},
     {"url":"stun1.l.google.com:19302"},
