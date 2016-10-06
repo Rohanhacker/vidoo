@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Vidoo</title>
+</head>
+<body>
+  <div class="video-area">
+    <video id="you" autoplay poster="img/d.jpg" class="video1">
+    </video>
+    <video id="friend" autoplay poster="img/h.jpg" class="video2">
+    </video>
+  </div>
+  <div class="id">
+    <p>Your id: <span id="my-id">...</span></p>
+    <p>
+      <span id="subhead">
+        Make a Call
+      </span>
+      <input type="text" name="call" placeholder="Call user id..."id="callto-id">
+      <a href="#" id="make-call">Make Call</a>
+    </p>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://cdn.peerjs.com/0.3/peer.js"></script>
+  <script src="js/app.js" charset="utf-8"></script>
+</body>
+</html>
