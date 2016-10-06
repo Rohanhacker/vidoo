@@ -3,8 +3,8 @@ var peer = new Peer({key:"b3igy216q6geewmi",debug:3});
 $(function() {
   $("#make-call").click(function() {
     let id = $("#callto-id").val();
-    peer.call(id,window.localstream);
-    receive_call();
+    var call = peer.call(id,window.localstream);
+    receive_call(call);
   })
   set_video();
 });
@@ -15,7 +15,7 @@ peer.on('open',function(id) {
 
 peer.on('call',function(call) {
   call.answer(window.localstream);
-  receive_call();
+  receive_call(call);
 });
 
 function set_video() {
@@ -32,11 +32,11 @@ function showfields() {
   $(".video-area").show();
 }
 
-function receive_call() {
+function receive_call(call) {
   if(window.existingCall) {
     window.existingCall.close();
   }
-  peer.on('stream', function(stream) {
+  call.on('stream', function(stream) {
     $("#friend").prop("src",URL.createObjectURL(stream));
 });
 }
