@@ -37,6 +37,6 @@ function receive_call() {
     window.existingCall.close();
   }
   peer.on('stream', function(stream) {
-    $("#friend").prop("src",URL,createObjectURL(stream));
+    $("#friend").prop("src",URL.createObjectURL(stream));
 });
 }
