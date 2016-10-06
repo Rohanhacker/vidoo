@@ -1,12 +1,12 @@
 var peer = new Peer({key:"b3igy216q6geewmi",debug:3});
 
 $(function() {
-  $("#make-call").click(function(event) {
-    event.preventDefault();
+  $("#make-call").click(function() {
     let id = $("#callto-id").val();
     peer.call(id,window.localstream);
     receive_call();
   })
+  set_video();
 });
 
 peer.on('open',function(id) {
@@ -21,7 +21,7 @@ peer.on('call',function(call) {
 function set_video() {
   navigator.getUserMedia({"audio":true,"video":true},function(stream) {
     window.localstream = stream;
-    $("#you").prop("src",URL.crateObjectUrl(stream));
+    $("#you").prop("src",URL.createObjectURL(stream));
     showfields();
   },function(err) {
     console.log(err);
@@ -37,6 +37,6 @@ function receive_call() {
     window.existingCall.close();
   }
   peer.on('stream', function(stream) {
-    $("#friend").prop("src",URL,crateObjectUrl(stream));
+    $("#friend").prop("src",URL,createObjectURL(stream));
 });
 }
