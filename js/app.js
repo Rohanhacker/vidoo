@@ -23,10 +23,10 @@ peer.on('open',function(id) {
   $("#my-id").text(id);
 });
 
-peer.on('call',function(call)) {
+peer.on('call',function(call) {
   call.answer(window.localstream);
   receive_call();
-}
+});
 
 function set_video() {
   navigator.getUserMedia({"audio":true,"video":true},function(stream) {
