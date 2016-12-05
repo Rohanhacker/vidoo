@@ -1,0 +1,30 @@
+body {
+  background-image: linear-gradient(22deg,red,blue);
+}
+
+.video-area {
+  display: flex;
+}
+
+video {
+  height: 80vh;
+  width: 32vw;
+  margin: 30px;
+}
+
+.id {
+  display: flex;
+  color:white;
+}
+
+.id div,.id p,.id a{
+  margin: 20px;
+}
+
+.id p {
+  color: yellow;
+}
+
+.row{
+  width: 60vw;
+}

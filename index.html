@@ -4,25 +4,38 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+  <link rel="stylesheet" href="./css/style.css" media="screen" title="no title" charset="utf-8">
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+
   <title>Vidoo</title>
 </head>
 <body>
-  <div class="video-area">
-    <video id="you" autoplay poster="img/d.jpg" class="video1">
-    </video>
-    <video id="friend" autoplay poster="img/h.jpg" class="video2">
-    </video>
-  </div>
-  <div class="id">
-    <p>Your id: <span id="my-id">...</span></p>
-    <p>
-      <span id="subhead">
-        Make a Call
-      </span>
-      <input type="text" name="call" placeholder="Call user id..."id="callto-id">
-      <a href="#" id="make-call">Make Call</a>
-    </p>
-  </div>
+  <div class="container">
+       <!-- Page Content goes here -->
+       <div class="video-area">
+         <video id="you" autoplay poster="img/h.jpg" class="video1">
+         </video>
+         <video id="friend" autoplay poster="img/h.jpg" class="video2">
+         </video>
+       </div>
+
+       <div class="id">
+         <p>Your id: <span id="my-id">...</span></p>
+         <p>
+           <div class="row">
+            <div class="input-field col s6">
+              <input id="caller" type="text" class="validate" name="call" placeholder="Call user id..."id="callto-id">
+              <label class="active" for="caller">Your ID</label>
+            </div>
+          </div>
+           <a href="#" class="waves-effect waves-light btn" id="make-call">Call</a>
+         </p>
+       </div>
+
+     </div>
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/peerjs/0.3.14/peer.min.js"></script>
   <script src="js/app.js" charset="utf-8"></script>
